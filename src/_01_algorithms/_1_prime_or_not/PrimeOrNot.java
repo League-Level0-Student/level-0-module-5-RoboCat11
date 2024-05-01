@@ -10,12 +10,12 @@ public class PrimeOrNot {
 		for(int i=2; i<number; i++) {
 			if(number % i==0) {
 				JOptionPane.showMessageDialog(null, "The number is not prime.");
+				return;
+		
 			}
-			else {
-				JOptionPane.showMessageDialog(null, "The number is prime.");	
-			}
+			
 		}
-
+				JOptionPane.showMessageDialog(null,"The number is prime.");
 
 
 
