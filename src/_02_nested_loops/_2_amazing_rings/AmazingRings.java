@@ -12,6 +12,7 @@ import processing.core.PImage;
  * In the setup() method:
  * 2. Set the size of your window to be a rectangle like in the recipe
  *    demonstration
+ *   
  * 3. Call the noFill() command so all the ellipses will be transparent
  *
  * In the draw() method:
@@ -44,17 +45,26 @@ public class AmazingRings extends PApplet {
 
     @Override
     public void settings() {
-
+    size(700,350);
     }
-
+    
     @Override
     public void setup() {
-
+    noFill();
     }
 
     @Override
     public void draw() {
-
+    for(int i=200; i>100; i-=100) {
+    if(i % 200==0) {
+    fill(0,0,0);	
+    }
+    else {
+    fill(0,0,0);	
+    }
+    ellipse(350,110,i,i);
+    
+    	}
     }
 
     static public void main(String[] args) {
