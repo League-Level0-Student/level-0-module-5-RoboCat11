@@ -26,7 +26,7 @@ import processing.core.PImage;
  * 6. When the rings reach the right side of the sketch, reverse the direction
  *    so they move
  *    Hint: speed = -speed
-      
+
  * 7. When the rings reach the left side of the sketch, reverse the direction
  *    again.
  * 
@@ -38,36 +38,48 @@ import processing.core.PImage;
  *    These rings must also "bounce" off the sides of the window.
  */
 public class AmazingRings extends PApplet {
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
+	static final int WIDTH = 800;
+	static final int HEIGHT = 600;
+	int x = 350;
+	int speed = 40;
+	int x2 = 1450;
+	PImage waldo;
 
-    PImage waldo;
+	@Override
+	public void settings() {
+		size(1800,750);
+		      
+	}
 
-    @Override
-    public void settings() {
-    size(700,350);
-    }
-    
-    @Override
-    public void setup() {
-    noFill();
-    }
+	@Override
+	public void setup() {
+		stroke(255,255,255);
+		noFill();
+	}
 
-    @Override
-    public void draw() {
-    for(int i=200; i>100; i-=100) {
-    if(i % 200==0) {
-    fill(0,0,0);	
-    }
-    else {
-    fill(0,0,0);	
-    }
-    ellipse(350,110,i,i);
-    
-    	}
-    }
+	@Override
+	public void draw() {
+		background(20,100,100);
+		for(int i=600; i>10; i-=10) {
+			ellipse(x,310,i,i);
 
-    static public void main(String[] args) {
-        PApplet.main(AmazingRings.class.getName());
-    }
+		}
+		 
+		for(int i=600; i>10; i-=10) {
+		ellipse(x2,310,i,i);	
+		}
+		x = x + speed;
+		x2 = x2 - speed;
+		if(x>1800) {
+		speed = -speed;	
+		}
+		
+		if(x<0) {
+		speed = -speed;	
+		}
+	}
+
+	static public void main(String[] args) {
+		PApplet.main(AmazingRings.class.getName());
+	}
 }
