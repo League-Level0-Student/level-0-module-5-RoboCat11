@@ -44,25 +44,32 @@ public class ForLoopGauntlet {
 		}
 		//#6
 
-		for(int i=0; i<778; i++) {
-			if(i%7==0) {
-		//System.out.println(i);
-			}
+		for(int i=0; i<7; i++) {
+			//System.out.println(i);
+
 		}
 		//#7
 
 		for(int i=1962; i<2025; i++) {
-		System.out.println("In " + i +  ", I was " + (i-1962) + " years old");
-			
+			//System.out.println("In " + i +  ", I was " + (i-1962) + " years old");
+
 		}
-		
+
 		//Nested For-Loops
-		
-		
 
+		//#1
 
+		for(int i=0; i<3; i++) {
 
-
+			for(int j=1; j<4; j++) {
+				//System.out.print(j+i*3);
+			
+			System.out.println(j+i*10);
+			System.out.println();
+		}
+		}
 	}
+
+
 
 }
