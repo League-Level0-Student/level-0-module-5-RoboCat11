@@ -52,7 +52,7 @@ public class IntroToMethods {
 	}
 
 	public static void method3(String message) {
-		System.out.println("Method3");
+		System.out.println(message);
 	}
 
 	public static String method4(String message) {

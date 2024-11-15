@@ -50,7 +50,7 @@ public class ForLoopGauntlet {
 		}
 		//#7
 
-		for(int i=1962; i<2025; i++) {
+		for(int i=2013; i<2025; i++) {
 			//System.out.println("In " + i +  ", I was " + (i-1962) + " years old");
 
 		}
@@ -74,10 +74,20 @@ public class ForLoopGauntlet {
 		for (int q=0; q<10; q++) {
 
 
-			for(int g=1; g<11; g++) {
-				System.out.print((g + q * 10)+ " ");	
+			//for(int g=1; g<11; g++) {
+				//System.out.print((g + q * 10)+ " ");	
+			//}
+			//System.out.println();
+		}
+		
+		
+		//#4
+		
+		for(int i=1; i<7; i++) {
+			for(int f=0; f<i; f++) {
+			System.out.print("* ");	
 			}
-			System.out.println();
+		System.out.println();	
 		}
 		//}
 	}
