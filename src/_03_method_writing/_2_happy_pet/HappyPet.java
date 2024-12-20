@@ -16,7 +16,7 @@ public class HappyPet {
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
 			int task = JOptionPane.showOptionDialog(null, "Question", "Title", 0, JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "Feed", "Button2", "Button3" }, null);
+					new String[] { "Feed your pet", "Clean your pet", "Play with your pet" }, null);
 
 			System.out.println(task);
 			// 6. Use user input to call the appropriate method created in step 5 below.
