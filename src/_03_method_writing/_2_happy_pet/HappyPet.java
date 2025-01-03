@@ -7,7 +7,7 @@ public class HappyPet {
 	// 1. Add the following variable to the next line: static int happinessLevel =
 	// 0;
 	// this will be used to store the happiness of your pet
-	static int happinessLevel = 0;
+	static int happinessLevel = 50;
 
 	public static void main(String[] args) {
 		// 2. Ask the user what kind of pet they want to buy, and store their answer in
@@ -48,7 +48,10 @@ public class HappyPet {
 				null);
 
 		System.out.println(task);
-
+		if(task==0) {
+			
+		}
+		
 		// 5. Create methods to handle each of your user selections.
 		// Each method should create a pop-up with the pet's response (eg. cat might
 		// purr when pet),
