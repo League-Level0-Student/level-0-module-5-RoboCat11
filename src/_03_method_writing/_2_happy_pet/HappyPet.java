@@ -57,7 +57,7 @@ public class HappyPet {
 		// purr when pet),
 		// and INCREMENT the pet's happiness Level.
 
-		// 6. Use user input to call the appropriate method created in step 5 below.
+		// 6. Use user input to call the appropriate method created in step 5 above.
 
 		// 7. If you determine the happiness level is large enough, tell the
 		// user that he loves his pet and use break; to exit for loop.
