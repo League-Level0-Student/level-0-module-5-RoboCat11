@@ -14,8 +14,9 @@ public class HappyPet {
 		// 2. Ask the user what kind of pet they want to buy, and store their answer in
 		// a variable
 		String input = JOptionPane.showInputDialog(null,
-				"What kind of pet would you like to buy? I have turtles, dogs, cats,"
-						+ " hummingbirds, coyotes, and wolves!",
+				"Hello! Welcome to Lele's Pet Store!\n My name is Jarvis."
+				+ " What kind\n of pet would you like to\n buy? I have turtles, dogs,"
+				+ " cats,\n hummingbirds, coyotes, and wolves!",
 						"Lele's Pet Store", JOptionPane.QUESTION_MESSAGE);
 		
 		if (input.contains("turtle")) {
@@ -43,16 +44,20 @@ public class HappyPet {
 			// Make sure to customize the title and question too.
 			int task = JOptionPane.showOptionDialog(null, "Of course! Now, the next step of buying a pet\n is to decide which activity you would like to do\n with it.",
 					"Lele's Pet Store", 0, JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "cage your " + pet, "Watch a movie with your " + pet, "Play with your " + pet,
+					new String[] { "Cage your " + pet, "Watch a movie with your " + pet, "Play with your " + pet,
 							"Clean up your " + pet + "'s poop ","Clean your " + pet, "Feed your " + pet },
 					null);
 
 			System.out.println(task);
-			if(task==0) {  // Cage your pet
+			if(task==0) {
 				cagePet();
 
-			}if (task==4) {
+			}
+			if (task==4) {
 			bathePet();	
+			}
+			if(task==5) {
+			feedPet();	
 			}
 
 
@@ -67,33 +72,41 @@ public class HappyPet {
 			// 7. If you determine the happiness level is large enough, tell the
 			// user that he loves his pet and use break; to exit for loop.
 
-			if(happinessLevel>=50) {
+			if(happinessLevel>=35) {
 				JOptionPane.showMessageDialog(null,"Good job! You have made your pet happy!");	
 				break;
 			}
 			if(happinessLevel<=0) {
-				JOptionPane.showMessageDialog(null,"WHAT IS WRONG WITH YOU?!!\n Your pet is angry, not\n happy! "
-						+ "I can guarantee you\n that your pet will bite\n your face off tonight. ");
+				JOptionPane.showMessageDialog(null,"WHAT IS WRONG WITH YOU?!!\n "
+						+ "You were supposed to make\n"
+						+ " your pet happy, not angry!\n "
+						+ "I can guarantee you that \n"
+						+ "your pet will bite or peck\n"
+						+ " your face off tonight. ");
 				break;
 			}
 		}
 	}
 	
 	static void cagePet() {
+		if(pet.equals("coyote")) {
+		JOptionPane.showMessageDialog(null, "Coyote says, 'You will regret this day! For by tomorrow morning at dawn,\n"
+				+ " I will bring my pack to this place, and they will give you a \n"
+				+ "very slow, painful death!' The next morning, you never wake up,\n"
+				+ " because by then, your coyote has already broken out of his/her\n"
+				+ "cage, taken his/her pack, and they have eaten you. If this was\n"
+				+ "your first activity wth your pet, try doing a different activity\n"
+				+ " next time.");	
+		}
 		if(pet.equals("wolf")) {
-			// wolf specific reaction to Cage
-			
-			// pop up a message dialog with wolf specific reaction
 			JOptionPane.showMessageDialog(null, "Wolf says, 'How dare you cage me!\n I will plot my revenge against you\n"
 					+ " while I am in this cage, and\n you will be sorry that you caged\n me!' Two weeks later, you release your\n"
 					+ " pet wolf, thinking that he/she is no\n longer angry at you. Immediately after\n you let him/her out,"
-					+ " he/she jumps at\n you and kills you. If this was\n your first pet, maybe try getting a\n different pet"
-					+ " next time.");
+					+ " he/she jumps at\n you and kills you. If this was\n your first activity with your pet, maybe\n try doing"
+					+ " a different activity next time.");
 			happinessLevel -= 3;
 	
 		}else {
-			//All other pets:
-			
 			happinessLevel -= 1;
 			
 		}
@@ -103,9 +116,9 @@ public class HappyPet {
 		if(pet.equals("cat")) {
 			JOptionPane.showMessageDialog(null,"Cat says, 'Yow! No, no! Stop it! I'm warning you!\n"
 					+ " I'm gonna bite you! Ah! It's too slippery!' While your cat is saying this \n"
-					+ "in a language you do not speak, you are trying to calme him/her down, but \n"
+					+ "in a language you do not speak, you are trying to calm him/her down, but \n"
 					+ "he/she eventually bites you, and a few days later you get infected. If this \n"
-					+ "was your first pet, try getting a different pet next time.");
+					+ "was your first activity with your pet, try doing a different activity next time.");
 			happinessLevel -= 1;
 			// cat specific reaction to cage
 		}else { // all the other pets
@@ -114,7 +127,14 @@ public class HappyPet {
 	}
 	
 	static void feedPet () {
-		
+		if(pet.equals("dog")) {
+			JOptionPane.showMessageDialog(null,"Dog says,'Please can I have a bite of your burger?\n"
+					+ " How about that steak over there? Can I have a treat?!' You notice that your\n"
+					+ " dog is sitting five inches away from you, and he/she keeps on wagging his/her\n"
+					+ " tail. So you think that he/she is hungry, and you get the pet food for your\n"
+					+ " dog. When you give it your dog, he/she is sad, because you did not give him/\n"
+					+ "her a treat! (which could be any kind of beef, and not ice cream or chocolate.)");
+		}
 		happinessLevel +=10;
 		
 	}
