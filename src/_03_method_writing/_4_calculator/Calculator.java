@@ -23,16 +23,20 @@ public class Calculator {
 	
 	// 3) Call the correct method depending on what option the user chooses
 		if(task==0) {
-		  System.out.println(	   result(  divide(number1, number2)  )  ) ;
+		System.out.println(result(divide(number1, number2)));
+		JOptionPane.showMessageDialog(null, result( divide(number1, number2)));
 		}
 		if(task==1) {
-		 System.out.println(	result(divide(number1, number2) ) );
+		System.out.println(	   result( multiply(number1, number2)  )  );
+		JOptionPane.showMessageDialog(null, result( multiply(number1, number2)));
 		}
 		if(task==2) {
-			
+		System.out.println(		result( subtract(number1, number2)  )  );
+		JOptionPane.showMessageDialog(null, result(subtract(number1, number2)));	
 		}
 		if(task==3) {
-			
+		System.out.println(		result( add(number1, number2)  )  );	
+		JOptionPane.showMessageDialog(null, result(add(number1, number2)));
 		}
 	}
 	// 4) Call the result() method and put the answer in a pop-up
