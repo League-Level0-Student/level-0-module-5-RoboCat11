@@ -48,6 +48,7 @@ public class skillPractice {
 		if (school.equals(input4)) {
 			JOptionPane.showMessageDialog(null, input4 + " is a fantastic school.");
 		}
+		
 	}
 
 }
